@@ -1,0 +1,86 @@
+### Read all users(protected route)
+GET http://localhost:3000/user-api/users
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJoYW51QGdtYWlsLmNvbSIsImlhdCI6MTc3Mjg3NTg4MiwiZXhwIjoxNzczNDgwNjgyfQ.YfCdl0shG_HfTaLaTsPqBois3gyP03VdfSo5YbKH-DQ; Path=/; HttpOnly; SameSite=Lax
+### Read a user by Id
+GET http://localhost:3000/user-api/user
+
+###create new user
+POST http://localhost:3000/user-api/users
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJoYW51QGdtYWlsLmNvbSIsImlhdCI6MTc3Mjg3NTg4MiwiZXhwIjoxNzczNDgwNjgyfQ.YfCdl0shG_HfTaLaTsPqBois3gyP03VdfSo5YbKH-DQ; Path=/; HttpOnly; SameSite=Lax
+Content-Type: application/json
+
+{
+  "username":"Naniy",
+  "password":"Naniy",
+  "email":"naniy@gmail.com",
+  "age":21
+}
+### authenticating
+POST http://localhost:3000/user-api/auth
+Content-Type: application/json
+
+{
+  "email":"bhanu@gmail.com",
+  "password":"bhanu"
+}
+###update the user
+PUT http://localhost:3000/user-api/users/69aa9186eb21b948cd221ec2
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJoYW51QGdtYWlsLmNvbSIsImlhdCI6MTc3Mjg3NjI4MiwiZXhwIjoxNzczNDgxMDgyfQ.gvhocj7n9MbWw095Wp0cRsuVqF0urhnwPYMchSXZJVw; Path=/; HttpOnly; SameSite=Lax
+Content-Type: application/json
+
+{
+  "username":"Lokesh",
+  "password":"Lokesh",
+  "email":"lokesh@gmail.com",
+  "age":24
+}
+###
+DELETE http://localhost:3000/user-api/users/69ad9e5b1667920788641f58
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJoYW51QGdtYWlsLmNvbSIsImlhdCI6MTc3Mjg3NTg4MiwiZXhwIjoxNzczNDgwNjgyfQ.YfCdl0shG_HfTaLaTsPqBois3gyP03VdfSo5YbKH-DQ; Path=/; HttpOnly; SameSite=Lax
+
+
+
+### Read all users
+GET http://localhost:3000/product-api/products
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0SWQiOjEsImlhdCI6MTc3Mjk4ODI2MSwiZXhwIjoxNzczNTkzMDYxfQ.qHeTLwPc8GxANZHmRl-IjC02mOwWgMZvl2AwMhqzAu0; Path=/; HttpOnly; SameSite=Lax
+
+### Read a user by Id
+GET http://localhost:3000/product-api/products/69ada7e8d5327f03b373b29f
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0SWQiOjEsImlhdCI6MTc3Mjk4ODI2MSwiZXhwIjoxNzczNTkzMDYxfQ.qHeTLwPc8GxANZHmRl-IjC02mOwWgMZvl2AwMhqzAu0; Path=/; HttpOnly; SameSite=Lax
+###create new user
+POST http://localhost:3000/product-api/products
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0SWQiOjEsImlhdCI6MTc3Mjk4ODI2MSwiZXhwIjoxNzczNTkzMDYxfQ.qHeTLwPc8GxANZHmRl-IjC02mOwWgMZvl2AwMhqzAu0; Path=/; HttpOnly; SameSite=Lax
+Content-Type: application/json
+
+{
+  "productId":1,
+  "productName":"mobile",
+  "brand":"apple",
+  "price":10000
+}
+###create auth
+POST http://localhost:3000/product-api/auth
+Content-Type: application/json
+
+{
+  "productId":1
+}
+
+###update th user
+PUT http://localhost:3000/product-api/products/69abb3c8f5aafefee48e1132
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0SWQiOjEsImlhdCI6MTc3Mjk4ODI2MSwiZXhwIjoxNzczNTkzMDYxfQ.qHeTLwPc8GxANZHmRl-IjC02mOwWgMZvl2AwMhqzAu0; Path=/; HttpOnly; SameSite=Lax
+Content-Type: application/json
+
+{
+  "productId":1,
+  "productName":"Laptop",
+  "brand":"apple",
+  "price":20000
+}
+###
+DELETE http://localhost:3000/product-api/products/69ada77f0b5a1857004f4832
+cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0SWQiOjEsImlhdCI6MTc3Mjk4ODI2MSwiZXhwIjoxNzczNTkzMDYxfQ.qHeTLwPc8GxANZHmRl-IjC02mOwWgMZvl2AwMhqzAu0; Path=/; HttpOnly; SameSite=Lax
+
+
+###add product to the user
+PUT  http://localhost:3000/user-api/cart/product-id/69abb3c8f5aafefee48e1132
