@@ -1,0 +1,20 @@
+.head{
+  padding:50px;
+  background-color: antiquewhite;
+}
+.head button{
+  background-color: rgb(13, 95, 226);
+  color:white;
+  border:0;
+  padding:5px;
+}
+.child{
+  display:flex;
+  margin:20px 50px;
+}
+.child button{
+  background-color: rgb(104, 96, 96);
+  color:white;
+  border:0;
+  padding:5px;
+}

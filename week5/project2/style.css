@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.head{
+  background-color: white;
+  color:red;
+  padding:5px;
+  margin-left: 29px;
+}
+.body{
+  background-color: red;
+  padding:30px;
+  color:white;
+  display: flex;
+}
+.tail{
+  display: flex;
+  gap:10px;
+  padding:10px;
+  background-color: red;
+
+}
+.tail section{
+  box-shadow: 1px 1px 15px grey;
+  padding:10px;
+  text-align: center;
+  background-color: brown;
+}
+.body img{
+  display: block;
+  background-color: red;
+  margin-top: 10px;
+}
+.body section p{
+  margin-top: 20px;;
+}
+.body section{
+  width:800px;
+  margin-right: 200px;
+}
