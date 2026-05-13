@@ -1,16 +1,77 @@
-# React + Vite
+# Blog App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern full-stack Blog Application frontend built using React, Tailwind CSS, React Router, Zustand, Axios, and JWT Authentication.
 
-Currently, two official plugins are available:
+This application supports:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Authentication
+- Author Dashboard
+- Article Publishing
+- Protected Routes
+- Profile Management
+- Cloudinary Image Upload
+- Responsive UI
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Features
 
-## Expanding the ESLint configuration
+## Authentication
+- User Registration
+- Login & Logout
+- JWT Authentication
+- Cookie-based Authentication
+- Protected Routes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## User Features
+- View Articles
+- Read Full Articles
+- View Author Details
+
+## Author Features
+- Create Articles
+- Edit Articles
+- Delete/Disable Articles
+- View Own Articles
+
+## Admin Features (Planned)
+- Manage Users
+- Manage Articles
+- Dashboard Analytics
+
+---
+
+# Tech Stack
+
+## Frontend
+- React.js
+- React Router DOM
+- Tailwind CSS
+- Axios
+- Zustand
+- React Hook Form
+
+## Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- Multer
+- Cloudinary
+
+---
+
+# Folder Structure
+
+```bash
+src/
+│
+├── components/
+├── pages/
+├── store/
+├── routes/
+├── styles/
+├── assets/
+├── App.jsx
+└── main.jsx
