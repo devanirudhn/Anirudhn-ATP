@@ -13,7 +13,7 @@ const app=exp()
 
 app.use(
   cors({
-    origin: "http://localhost:5173", 
+    origin: ["http://localhost:5173", "https://anirudhn-atp-y3n6.vercel.app"], 
     credentials: true, 
   })
 );
