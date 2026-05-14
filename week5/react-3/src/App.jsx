@@ -18,33 +18,27 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "register",
-          element: <Register />
+          element: <Register />,
         },
         {
           path: "login",
-          element: <Login />
+          element: <Login />,
         },
         {
           path: "technologies",
           element: <Technologies />,
           children: [
-            { path: "java", 
-              element: <Java /> 
-            },
-            { path: "nodejs", 
-              element: <Nodejs />
-             },
-            { path: "vue",
-               element: <Vue />
-            }
-          ]
-        }
-      ]
-    }
+            { path: "java", element: <Java /> },
+            { path: "nodejs", element: <Nodejs /> },
+            { path: "vue", element: <Vue /> },
+          ],
+        },
+      ],
+    },
   ]);
 
   return <RouterProvider router={routerObj} />;

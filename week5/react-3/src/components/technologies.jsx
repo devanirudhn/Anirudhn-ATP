@@ -8,4 +8,4 @@ function Technologies() {
     </div>
   );
 }
-export default Technologies
+export default Technologies;

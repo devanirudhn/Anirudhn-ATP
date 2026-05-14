@@ -1,16 +1,15 @@
-import exp from 'express'
-import { verifyToken } from '../middlewares/verifyToken.js'
-import { userModel } from '../models/userModel.js'
-export const adminApp = exp.Router()
+import exp from "express";
+import { verifyToken } from "../middlewares/verifyToken.js";
+import { userModel } from "../models/userModel.js";
+export const adminApp = exp.Router();
 //admin login
 //read all users and authors
-adminApp.get('/users',verifyToken("ADMIN"),async (req,res)=>{
-   const users =await userModel.find({role:["USER",'AUTHOR']})
-   res.status(200).json({message:"all users",payload:users})
-})
+adminApp.get("/users", verifyToken("ADMIN"), async (req, res) => {
+  const users = await userModel.find({ role: ["USER", "AUTHOR"] });
+  res.status(200).json({ message: "all users", payload: users });
+});
 //block or activate users and authors
-adminApp.patch('/users', verifyToken('ADMIN'), async (req, res) => {
-
+adminApp.patch("/users", verifyToken("ADMIN"), async (req, res) => {
   // get email from request body
   const { email } = req.body;
 
@@ -30,7 +29,6 @@ adminApp.patch('/users', verifyToken('ADMIN'), async (req, res) => {
   // response message based on status
   res.status(200).json({
     message: user.isUserActive ? "User activated" : "User blocked",
-    payload: user
+    payload: user,
   });
-
 });

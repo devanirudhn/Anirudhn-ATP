@@ -1,18 +1,18 @@
-// finding the smallest element in a given array
-let marks=[1,20,30,40,2]
+// Challenge 4
+//  Find the smallest element in a given array
+// Declaring array
+let marks = [1, 20, 30, 40, 2];
 
-for(let i=0;i<marks.length;i++)
-{
-    let smallest=marks[0];
-    if(marks[i]<smallest)
-    {
-        smallest=marks[i];
-        console.log(smallest);
-        
-    }
-    else
-    {
-        console.log(smallest);
-        
-    }
+// Assuming first element as smallest
+let smallest = marks[0];
+
+// Looping through remaining elements
+for (let i = 1; i < marks.length; i++) {
+  // Checking for smaller element
+  if (marks[i] < smallest) {
+    smallest = marks[i];
+  }
 }
+
+// Printing smallest element
+console.log(smallest);

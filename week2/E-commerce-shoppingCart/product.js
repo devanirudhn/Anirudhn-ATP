@@ -13,75 +13,74 @@
 //                             { id: 4, name: 'Mouse', price: 500, stock: 50, category: 'accessories' },
 //                             { id: 5, name: 'Keyboard', price: 1500, stock: 30, category: 'accessories' }
 //                           ];
-                          
+
 //                           // TODO: Implement these functions
-                          
+
 //                           export function getProductById(id) {
 //                             // Find and return product by ID
 //                           }
-                          
+
 //                           export function getAllProducts() {
 //                             // Return all products
 //                           }
-                          
+
 //                           export function getProductsByCategory(category) {
 //                             // Filter products by category
 //                           }
-                          
+
 //                           export function searchProducts(query) {
 //                             // Search products by name (case-insensitive)
 //                           }
-                          
+
 //                           export function checkStock(productId, quantity) {
 //                             // Check if product has enough stock
 //                             // Return true/false
 //                           }
-                          
+
 //                           export function reduceStock(productId, quantity) {
 //                             // Reduce product stock after purchase
 //                           }
 
- const products = [
-{ id: 1, name: 'Laptop', price: 50000, stock: 10, category: 'electronics' },
-{ id: 2, name: 'Phone', price: 30000, stock: 15, category: 'electronics' },
-{ id: 3, name: 'Headphones', price: 2000, stock: 25, category: 'accessories' },
-{ id: 4, name: 'Mouse', price: 500, stock: 50, category: 'accessories' },
-{ id: 5, name: 'Keyboard', price: 1500, stock: 30, category: 'accessories' }
- ];
+const products = [
+  { id: 1, name: "Laptop", price: 50000, stock: 10, category: "electronics" },
+  { id: 2, name: "Phone", price: 30000, stock: 15, category: "electronics" },
+  {
+    id: 3,
+    name: "Headphones",
+    price: 2000,
+    stock: 25,
+    category: "accessories",
+  },
+  { id: 4, name: "Mouse", price: 500, stock: 50, category: "accessories" },
+  { id: 5, name: "Keyboard", price: 1500, stock: 30, category: "accessories" },
+];
 
-export function getProductById(id)
- {
-        return products.find((element) => element.id === id)
- }
- export function getAllProducts() {
-    return products;
+export function getProductById(id) {
+  return products.find((element) => element.id === id);
+}
+export function getAllProducts() {
+  return products;
+}
+
+export function getProductsByCategory(category) {
+  // Filter products by category
+  let prodByCategory = products.filter(
+    (element) => element.category === category,
+  );
+  return prodByCategory;
+}
+
+export function searchProducts(query) {
+  return products.filter((element) => element.name.includes(query));
+}
+
+export function checkStock(productId, quantity) {
+  let product = products.find((element) => element.id === productId);
+  if (product == -1) {
+    return "product not fouund";
   }
-  
-                          
- export function getProductsByCategory(category) {
-// Filter products by category
-let prodByCategory = products.filter((element) => element.category === category)
-return prodByCategory
-
+  return product.stock >= quantity;
 }
-                          
-export function searchProducts(query) 
-{
-return products.filter((element) => element.name .includes(query))
- }
-                          
-export function checkStock(productId, quantity) 
-{
- 
- let product =products.find((element) => element.id === productId)
-if(product == -1)
-{
-    return "product not fouund"
+export function reduceStock() {
+  return true;
 }
-return product.stock >= quantity;
-
-}
-export function reduceStock() 
-{
-return true;
- }

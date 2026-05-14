@@ -1,16 +1,25 @@
-// write a function that receives an array as arg and return their sum
-function ArgAsPara(marks)
+//  Challenge 6
+// Write a function that receives an array as argument and returns the sum
+// Function to calculate array sum
+function arraySum(marks) {
+  // Variable to store sum
+  let sum = 0;
 
-{
-    let sum=0;
-    for(let i=0;i<marks.length;i++)
-    {
-        sum=sum+marks[i];
-    }
-    return sum;
+  // Looping through array
+  for (let i = 0; i < marks.length; i++) {
+    // Adding array elements
+    sum = sum + marks[i];
+  }
 
-
+  // Returning final sum
+  return sum;
 }
-let marks=[1,2,3,4,5,6];
-let result= ArgAsPara(marks)
+
+// Declaring array
+let marks = [1, 2, 3, 4, 5, 6];
+
+// Function call
+let result = arraySum(marks);
+
+// Printing result
 console.log(result);

@@ -1,4 +1,3 @@
-
 //       iii. app.js - Main application
 //                   // TODO: Import task functions
 //                   // import { ... } from './task.js';
@@ -8,11 +7,8 @@
 //                   // 3. Complete a task
 //                   // 4. Display all tasks again
 
-
-
-import { addTask, getAllTasks } from "../../task.js";   
-console.log(addTask("eating","high","2024-12-28"));
-console.log(addTask("sleeping","high","2024-12-28"));
-let result=getAllTasks()
+import { addTask, getAllTasks } from "../../task.js";
+console.log(addTask("eating", "high", "2024-12-28"));
+console.log(addTask("sleeping", "high", "2024-12-28"));
+let result = getAllTasks();
 console.log(result);
-

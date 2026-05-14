@@ -1,20 +1,17 @@
-// finding the sum of marks in a given array
-let marks=[90,78,65,98]
-let sum=0;
-let ite;
-let smallest=marks[0];
-for( ite=0;ite<marks.length;ite++)
-{
-     sum=sum+marks[ite];
-    let smallest=marks[0];
-    if(marks[ite]<smallest)
-    {
-        smallest=marks[ite];
-        console.log(smallest);
-        
-    }
-    
+//  Challenge 3
+//  Find the sum of marks in a given array
 
+// Declaring marks array
+let marks = [90, 78, 65, 98];
+
+// Variable to store sum
+let sum = 0;
+
+// Looping through array elements
+for (let i = 0; i < marks.length; i++) {
+  // Adding each element to sum
+  sum = sum + marks[i];
 }
-console.log(sum);
 
+// Printing total sum
+console.log(sum);

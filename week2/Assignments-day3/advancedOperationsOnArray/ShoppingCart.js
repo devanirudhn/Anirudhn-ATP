@@ -2,7 +2,7 @@
 // -------------
 // You are building a shopping cart summary for an e-commerce website.
 
-// Test Data : 
+// Test Data :
 // const cart = [
 //   { id: 101, name: "Laptop", price: 60000, quantity: 1, inStock: true },
 //   { id: 102, name: "Mouse", price: 800, quantity: 2, inStock: true },
@@ -16,31 +16,30 @@
 //     3. Use reduce() to calculate grand total cart value
 //     4. Use find() to get details of "Mouse"
 //     5. Use findIndex() to find the position of "Keyboard"
-    
 
 const cart = [
-    { id: 101, name: "Laptop", price: 60000, quantity: 1, inStock: true },
-    { id: 102, name: "Mouse", price: 800, quantity: 2, inStock: true },
-    { id: 103, name: "Keyboard", price: 1500, quantity: 1, inStock: false },
-    { id: 104, name: "Monitor", price: 12000, quantity: 1, inStock: true}
- ];
- 
+  { id: 101, name: "Laptop", price: 60000, quantity: 1, inStock: true },
+  { id: 102, name: "Mouse", price: 800, quantity: 2, inStock: true },
+  { id: 103, name: "Keyboard", price: 1500, quantity: 1, inStock: false },
+  { id: 104, name: "Monitor", price: 12000, quantity: 1, inStock: true },
+];
+
 //  filtering the instock products
-let stocked = cart.filter( (element)=> element.inStock== true)
+let stocked = cart.filter((element) => element.inStock == true);
 console.log(stocked);
 //  array for price and names
- let anotherarr = cart.map((element)=>({ iname : element.name, iprice : element.price}))
-    console.log(anotherarr);
-    
+let anotherarr = cart.map((element) => ({
+  iname: element.name,
+  iprice: element.price,
+}));
+console.log(anotherarr);
 
-    // calculating the total using reduce
- let total=cart.reduce((prev,next)=>prev+next.price,0)
- console.log(total);
+// calculating the total using reduce
+let total = cart.reduce((prev, next) => prev + next.price, 0);
+console.log(total);
 //  find mouse
-let srch=cart.find((element)=> element.name==="Mouse")
+let srch = cart.find((element) => element.name === "Mouse");
 console.log(srch);
 // findindex to find position of keyboard
-let indx = cart.findIndex((element)=> element.name=="Keyboard")
+let indx = cart.findIndex((element) => element.name == "Keyboard");
 console.log(indx);
-
-

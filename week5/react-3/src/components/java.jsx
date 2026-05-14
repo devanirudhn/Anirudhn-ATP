@@ -1,9 +1,5 @@
-
-
 function java() {
-  return (
-    <div>java</div>
-  )
+  return <div>java</div>;
 }
 
-export default java
+export default java;

@@ -2,9 +2,9 @@
 //                           import { reduceStock } from './product.js';
 //                           import { getCartItems, getCartTotal, clearCart } from './cart.js';
 //                           import { applyDiscount } from './discount.js';
-                          
+
 //                           // TODO: Implement these functions
-                          
+
 //                           export function processPayment(paymentMethod, couponCode = null) {
 //                             // 1. Get cart items and total
 //                             // 2. Apply discount if coupon provided
@@ -13,7 +13,7 @@
 //                             // 5. Reduce stock for all items
 //                             // 6. Clear cart
 //                             // 7. Generate order summary
-                            
+
 //                             // Return order summary:
 //                             // {
 //                             //   orderId: ...,
@@ -26,22 +26,21 @@
 //                             //   message: '...'
 //                             // }
 //                           }
-                          
+
 //                           export function validatePaymentMethod(method) {
 //                             // Check if method is valid (card/upi/cod)
 //                           }
-                          
+
 //                           function generateOrderId() {
 //                             // Generate random order ID
 //                             return 'ORD' + Date.now();
 //                           }
 
-import { reduceStock } from './product.js';
-import { getCartItems, getCartTotal, clearCart } from './cart.js';
-import { applyDiscount } from './discount.js';
+import { reduceStock } from "./product.js";
+import { getCartItems, getCartTotal, clearCart } from "./cart.js";
+import { applyDiscount } from "./discount.js";
 
 export function processPayment(paymentMethod, couponCode = null) {
-
   const items = getCartItems();
   const subtotal = getCartTotal();
 
@@ -58,7 +57,7 @@ export function processPayment(paymentMethod, couponCode = null) {
   }
 
   // Reduce stock
-  items.forEach(item => {
+  items.forEach((item) => {
     reduceStock(item.id, item.quantity);
   });
 
@@ -73,17 +72,16 @@ export function processPayment(paymentMethod, couponCode = null) {
     total: finalTotal,
     paymentMethod,
     status: "success",
-    message: "Payment successful"
+    message: "Payment successful",
   };
 }
 
 export function validatePaymentMethod(method) {
-
-  const methods = ['card', 'upi', 'cod'];
+  const methods = ["card", "upi", "cod"];
 
   return methods.includes(method);
 }
 
 function generateOrderId() {
-  return 'ORD' + Date.now();
+  return "ORD" + Date.now();
 }

@@ -1,20 +1,25 @@
-// write a function that receives thre number args and return the big number
-function bigNumber (a,b,c)
-{
-    if(a>b&&a>c)
-{
+// Challenge 5
+//  Write a function that receives three number arguments and returns the biggest number
+// Function to find biggest number
+function bigNumber(a, b, c) {
+  // Checking whether a is biggest
+  if (a > b && a > c) {
     return a;
-    
-}
-else if (b>c){
-    return b;
-    }
-    else{
-        return c;
+  }
 
-        
-    }
+  // Checking whether b is biggest
+  else if (b > c) {
+    return b;
+  }
+
+  // Otherwise c is biggest
+  else {
+    return c;
+  }
 }
- let result=bigNumber(10,20,30);
- console.log(result);
- 
+
+// Function call
+let result = bigNumber(10, 20, 30);
+
+// Printing result
+console.log(result);

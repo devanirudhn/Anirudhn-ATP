@@ -1,8 +1,5 @@
-
 function vue() {
-  return (
-    <div>vue</div>
-  )
+  return <div>vue</div>;
 }
 
-export default vue
+export default vue;

@@ -1,9 +1,5 @@
-
-
 function nodejs() {
-  return (
-    <div>nodejs</div>
-  )
+  return <div>nodejs</div>;
 }
 
-export default nodejs
+export default nodejs;
